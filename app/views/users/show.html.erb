@@ -9,7 +9,7 @@
             <tr></tr>
             <tr>
               <th>namae</th>
-              <th><%= current_user.name %></th>
+              <th><%= @user.name %></th>
             </tr>
             <tr>
               <th>introduction</th>
@@ -31,7 +31,7 @@
              <%= f.text_area :body%>
            </div>
            <div class="form-group">
-             <%= f.submit "CreateBook", class: "btn btn-success" %>
+             <%= f.submit "Create Book", class: "btn btn-success" %>
            </div>
         <% end %>
       </div>

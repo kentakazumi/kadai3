@@ -2,25 +2,50 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
-        <h3>Edting Book</h3>
+        <h1>Editing Book</h1>
         <% if @book.errors.any? %>
-            <ul style="color: red">
+        <div>
+          <ul style="color: red">
             <h3><%= @book.errors.count %> errors prohibited this obj from being saved</h3>
             <% @book. errors.full_messages.each do |message| %>
-            <li><%= message %></li>
+              <li><%= message %></li>
             <% end %>
-            </ul>
+          </ul>
+        </div>
         <% end %>
         <%= form_with model:@book, local:true do |f| %>
-            <h4>Title</h4>
+           <h4>Title</h4>
             <%= f.text_field :title %>
             <h4>Opinion</h4>
             <%= f.text_area :body %>
-            <%= f.submit 'Update Book' %>
+            <%= f.submit 'Update Book', class:"btn btn-success" %>
         <% end %>
-<%= link_to "Show", book_path(@book) %>
-<%= link_to "Back", books_path %>
+           <%= link_to "Show", book_path(@book) %>
+           <%= link_to "Back", books_path %>
       </div>
       </div>
    </div>
 </main>
+
+
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
