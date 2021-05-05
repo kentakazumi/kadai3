@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
    before_action :authenticate_user!
-   
+
   def index
     @users = User.all
     @books = Book.all
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
       render :edit
     end
   end
-   
+
 
 
 
