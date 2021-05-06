@@ -33,6 +33,9 @@ ActiveRecord::Schema.define(version: 2021_05_04_051644) do
     t.integer "book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    
+    
+    
   end
 
   create_table "relationships", force: :cascade do |t|
