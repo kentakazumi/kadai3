@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {
+   :registrations => 'users/registrations',
+  }
   root to: 'homes#top'
   get "home/about" => "homes#about"
   resources :books do
@@ -13,4 +15,5 @@ Rails.application.routes.draw do
     get 'followers' => 'relationships#followers'
   end
   get '/search', to: 'searchs#search'
+
 end
